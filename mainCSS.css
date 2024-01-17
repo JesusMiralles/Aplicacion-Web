@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', 'sans-serif';
+}
+
+
+header{
+    width: 100%;
+    height: 100vh;
+    background-image: url('Imagenes/121.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: 1001;
+}
+
+/* Configuracion del Nav, sus hover y funcion de desplazamiento*/
+.nav{
+    position: fixed;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    transition: all 0.5s ease;
+    box-shadow: 0 0 7px black;
+}
+.nav a{
+    color: orange;
+    text-decoration: none;
+    font-weight: 550;
+    
+}
+
+.nav.active .logo,
+.nav.active a{
+    color: black;
+}
+
+.nav ul li a::after{
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #E15D1B;
+    margin-right: auto;
+    transition: 0.4s;
+}
+.nav ul li a:hover::after{
+    width: 100%
+}
+nav ul li a:hover{
+    color: #E15D1B;
+}
+
+.logo{
+    font-size: 25px;
+    color: orange;
+    font-weight: 700;
+    margin: 25px;
+}
+.menu{
+    display: flex;
+}
+.menu li{
+    list-style: none;
+    margin: 20px;
+}
+/*
+.menu li a{
+    color: orange;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.menu li a:hover {
+    background: white;
+    color: rgb(30, 4, 124);
+    border-radius: 5px;
+    
+}*/
+
+.scrol{
+    height: 100px;
+}
+
+
+/* 3Cajitas de Contacto*/
+.info{
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;   
+}
+.info-1{
+    width: 300px;
+    padding: 15px 25px;
+    text-align: center;
+    box-shadow: 0 0 5px black;
+    border-radius: 20px;
+}
+.info-1 img{
+    width: 35px;
+}
+.info-1 h3{
+    font-size: 18px;
+    color: rgb(30, 4, 124);
+    margin-bottom: 10px;
+}
+.info-1 p{
+    font-size: 16px;
+    color: grey;
+}
+
+
+/* CONFIGURACION DE NOSOTROS*/
+.nosotros {
+    position: relative;
+    z-index: -1; /* Coloca este elemento detrás de los demás */
+}
+
+.bg-2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Haz que la imagen ocupe todo el ancho */
+    z-index: -1000; /* Para colocar este elemento muy atrás */
+}
+
+.nosotros-info {
+    padding: 50px 10px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 1; /* Coloca este elemento por encima del fondo */
+}
+.nosotros-img{
+    width: 50%;
+}
+.nosotros-img img{
+    width: 650px;
+}
+.nosotros-txt{
+    width: 50%;
+}
+.nosotros-txt span{
+    font-size: 16px;
+    color: blueviolet;
+    width: 700px;
+    margin-bottom: 25px;
+}
+.nosotros-txt h2{
+    font-size: 45px;
+    color: rgb(30, 4, 124);
+    margin-bottom: 30px;
+}
+.nosotros-txt p{
+    font-size: 18px;
+    color: rgb(30, 4, 124);
+    margin-bottom: 50px;
+}
+
+
+/* CONFIGURACION DE Productos*/
+.product{
+    padding: 50px 0;
+    text-align: center;
+
+}
+.product h2{
+    font-size: 45px;
+    color: rgb(30, 4, 124);
+    margin-bottom: 30px;    
+}
+
+.product p{
+    font-size: 18px;
+    color: cadetblue;
+    margin-bottom: 70px;
+    padding: 0 200px;
+    
+}
+.product-info{
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Estirar las cajas para llenar el contenedor verticalmente */
+    flex-wrap: wrap;  
+}
+
+.product{
+
+    flex-basis: calc(33.33% - 20px); /* Define el tamaño de cada producto (menos los márgenes) */
+    justify-content: space-between;
+    padding-bottom: 35px;
+    text-align: center; 
+    border-radius: 25px; /* hace redondos los bordes de una caja*/
+}
+.product img{
+    width: 300px; 
+    height: 200px; 
+    object-fit: contain; /* Ajusta la imagen sin desbordar el contenedor */
+    border-radius: 25px; 
+    box-shadow: 0 0 20px black;
+   
+}
+.product h3{
+    font-size: 20px;
+    color: black;
+    margin-top: 15px;
+    
+}
+.product p{
+    font-size: 16px;
+    padding: 30px;
+    color: rgb(0, 0, 0);
+    margin: 20px;
+    box-shadow: 0 0 7px black;
+}
+.product span{
+    background-color: rgb(30, 4, 124);
+    padding: 10px;
+    color: aliceblue;
+    border-radius: 15px;
+    box-shadow: 0 0 8px black;
+    
+}
+
+
+/* CONFIGURACION DEL FOOTER*/
+ .footer {
+    padding: 30px 0;
+    padding: 20px;
+}
+ .footer-links{
+    display: flex;
+    justify-content: space-between;
+ }
+ .links h3{
+    font-size: 20px;
+    color: darkorchid;
+    margin-bottom: 20px;
+ }
+
+ .socials img{
+    margin-right: 15px;
+ }
+.link ul li a {
+    font-size: 16px;
+    display: block;
+    margin-bottom: 10px;
+    color: black;
+    text-decoration: none; /* Quita el subrayado del enlace */
+}
+.link ul {
+    list-style: none; /* Quita el punto de la lista */
+}
+ .link ul li a:hover {
+    text-decoration: underline; /* Agrega subrayado al pasar el mouse si es necesario */
+}
+ 
+.hr {
+  width: 100%;
+  border: 1px solid darkblue; 
+}
+
+
+
